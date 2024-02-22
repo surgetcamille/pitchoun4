@@ -1,14 +1,28 @@
-<p style="color: green"><%= notice %></p>
 
-<h1>Artworks</h1>
 
-<div id="artworks">
-  <% @artworks.each do |artwork| %>
-    <%= render artwork %>
-    <p>
-      <%= link_to "Show this artwork", artwork %>
-    </p>
-  <% end %>
-</div>
+  <div class="container">
+    <h1>Welcome to Pitchoun's Museum</h1>
+    <h2>Discover a world of creativity and imagination!</h2>
 
-<%= link_to "New artwork", new_artwork_path %>
+    <div class="mb-5">
+      <a class="btn btn-outline-secondary" href="<%= new_child_path %>">Create a new profile for your child</a>
+    </div>
+
+    <div id="artworks">
+      <% @artworks.each do |artwork| %>
+        <%= render artwork %>
+        <p>
+          <%= link_to "Show this artwork", artwork %>
+        </p>
+      <% end %>
+    </div>
+    
+    <div class="mb-5">
+      <a class="btn btn-outline-secondary" href="<%= new_artwork_path %>">Create a new artwork</a>
+    </div>
+  </div>
+
+  <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.5.4/dist/umd/popper.min.js"></script>
+  <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+

@@ -13,3 +13,111 @@
  *= require_tree .
  *= require_self
  */
+ body {
+    background-image: url('https://cdn.midjourney.com/9f27bebe-166e-4b7d-b0b2-d390d24c9968/0_0.png');
+    background-size: cover;
+    background-position: center;
+    font-family: 'Arial', sans-serif;
+    color: #333;
+    margin: 0;
+    padding: 0;
+  }
+  .navbar {
+    background-color: #f8f9fa;
+    border-bottom: 1px solid #dee2e6;
+  }
+  .navbar-brand {
+    color: #6c757d;
+    font-weight: bold;
+    font-size: 1.8rem;
+    text-transform: uppercase;
+    transition: all 0.3s ease;
+  }
+  .navbar-brand:hover {
+    color: #495057;
+    transform: scale(1.1);
+  }
+  .nav-link {
+    color: #495057 !important;
+    font-weight: bold;
+    text-transform: uppercase;
+    transition: color 0.3s ease;
+  }
+  .nav-link:hover {
+    color: #343a40 !important;
+    transform: scale(1.1);
+  }
+  h1 {
+    background-color: #f8f9fa;
+    border: 2px solid #6c757d;
+    padding: 30px;
+    text-align: center;
+    margin-top: 50px;
+    color: #495057;
+    border-radius: 15px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    animation: fadeInDown 1s ease;
+  }
+  h2 {
+    background-color: #f8f9fa;
+    border: 2px solid #6c757d;
+    padding: 20px;
+    text-align: center;
+    margin-bottom: 50px;
+    color: #495057;
+    border-radius: 15px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    animation: fadeInUp 1s ease;
+  }
+  .container {
+    max-width: 800px;
+    margin: auto;
+    text-align: center;
+  }
+  .btn-outline-secondary {
+    color: #f8f9fa;
+    background-color: #6c757d;
+    border-color: #6c757d;
+    transition: all 0.3s ease;
+    border-radius: 30px;
+    font-size: 1.2rem;
+  }
+  .btn-outline-secondary:hover {
+    background-color: #343a40;
+    color: #f8f9fa;
+    transform: scale(1.1) rotate(5deg);
+  }
+  .btn-outline-secondary:focus {
+    box-shadow: 0 0 0 0.2rem rgba(108, 117, 125, 0.5);
+  }
+
+  @keyframes fadeInDown {
+    from {
+      opacity: 0;
+      transform: translateY(-50px);
+    }
+    to {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
+  @keyframes fadeInUp {
+    from {
+      opacity: 0;
+      transform: translateY(50px);
+    }
+    to {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
+
+  .btn-outline-secondary:hover {
+    animation: pulse 0.5s infinite alternate;
+  }
+  @keyframes pulse {
+    to {
+      transform: scale(1.1);
+      box-shadow: 0 0 0 0.2rem rgba(108, 117, 125, 0.5);
+    }
+  }
