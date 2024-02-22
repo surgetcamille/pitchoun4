@@ -1,7 +1,9 @@
 <div id="<%= dom_id child %>">
   <p>
     <strong>Picture:</strong>
-    <%= child.picture %>
+    <div class="imageChild">
+    <%= image_tag child.picture, class: "card-img-top"%>
+  </div>
   </p>
 
   <p>

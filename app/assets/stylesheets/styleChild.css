@@ -1,0 +1,6 @@
+.imageChild {
+    width: 100%;
+    overflow: hidden;
+    height: calc(100% - 20px);
+    object-fit: cover;
+}

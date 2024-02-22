@@ -1,14 +1,24 @@
-<p style="color: green"><%= notice %></p>
-
-<h1>Children</h1>
-
-<div id="children">
-  <% @children.each do |child| %>
-    <%= render child %>
-    <p>
-      <%= link_to "Show this child", child %>
-    </p>
-  <% end %>
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Childrens</title>
+</head>
+<div class="container">
+  <p><%= notice %></p>
+  <h1>Children</h1>
+  <div class="row">
+    <% @children.each do |child| %>
+      <div class="col-md-4">
+        <div class="card mb-3">
+          <div class="card-body">
+            <%= render child %>
+            <p>
+              <%= link_to "Show this child", child, class: "btn btn-primary" %>
+            </p>
+          </div>
+        </div>
+      </div>
+    <% end %>
+  </div>
 </div>
-
-<%= link_to "New child", new_child_path %>
+<%= link_to "New child", new_child_path, class: "btn btn-success" %> 
