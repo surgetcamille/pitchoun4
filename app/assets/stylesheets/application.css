@@ -13,8 +13,9 @@
  *= require_tree .
  *= require_self
  */
+ 
  body {
-    background-image: url('https://cdn.midjourney.com/9f27bebe-166e-4b7d-b0b2-d390d24c9968/0_0.png');
+    background-image: url('https://www.canva.com/design/DAF9njzoHog/Ud17zS7VSQfPX62YKjVUVA/view');
     background-size: cover;
     background-position: center;
     font-family: 'Arial', sans-serif;
@@ -23,11 +24,11 @@
     padding: 0;
   }
   .navbar {
-    background-color: #f8f9fa;
-    border-bottom: 1px solid #dee2e6;
+    background-color: #e8d6a2;
+    border-bottom: 1px solid #ef8649;
   }
   .navbar-brand {
-    color: #6c757d;
+    color: #2a2c2e;
     font-weight: bold;
     font-size: 1.8rem;
     text-transform: uppercase;
