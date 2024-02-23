@@ -1,27 +1,22 @@
-<img src="<%= artwork.paint %>" class="card-img-top image-frame" alt="Painting">
-<div class="container">
-  <div class="row justify-content-center">
-    <div class="col-md-14">
-      <div id="<%= dom_id artwork %>" class="card">
-        <div class="card-body">
-          <h5 class="card-title mt-3"><strong>Title:</strong></h5>
-          <p class="card-text"><%= artwork.title %></p>
+<div id="<%= dom_id artwork %>" class="">
+  <img src="<%= artwork.paint %>" class="card-img-top image-frame shadow p-3 mb-5 bg-body-tertiary rounded " alt="Painting">
+  <div class="card-body card custom-text-center"> <!-- Ajout de la classe text-center ici -->
+    <h5 class="card-title mt-3"><strong>Title:</strong></h5>
+    <p class="card-text"><%= artwork.title %></p>
 
-          <h5 class="card-title border-bottom pb-2"><strong>Date:</strong></h5>
-          <ul class="list-group list-group-flush">
-            <li class="list-group-item"><%= artwork.date %></li>
-          </ul>
+    <h5 class="card-title pb-2"><strong>Date:</strong></h5>
+    <ul class="list-group list-group-flush">
+      <li class="list-group-item"><%= artwork.date %></li>
+    </ul>
 
-          <h5 class="card-title mt-4 border-bottom pb-2"><strong>Author:</strong></h5>
-          <p class="card-text">
-            <%= link_to artwork.author, artwork.author, class: "card-link" %>
-            <a href="#" class="card-link">See more artworks by <%= artwork.author %></a>
-          </p>
+    <h5 class="card-title mt-4 border-bottom pb-2"><strong>Author:</strong></h5>
+    <p class="card-text">
+      <%= link_to artwork.author, artwork.author, class: "card-link" %>
+    </p>
 
-          <h5 class="card-title mt-4 border-bottom pb-2"><strong>Description:</strong></h5>
-          <p class="card-text"><%= artwork.description %></p>
-        </div>
-      </div>
-    </div>
+    <h5 class="card-title mt-4 border-bottom pb-2"><strong>Description:</strong></h5>
+    <p class="card-text" style="max-width: 400px;"> <!-- Changer la valeur selon vos besoins -->
+      <%= artwork.description %>
+    </p>
   </div>
 </div>
