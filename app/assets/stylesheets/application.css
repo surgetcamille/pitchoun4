@@ -30,7 +30,6 @@ background-size: cover;
   .navbar {
     background-color: #e8d6a2;
     border-bottom: 1px solid #ef8649;
-    
   }
   .navbar-brand {
     color: #2a2c2e;
@@ -48,11 +47,13 @@ background-size: cover;
     font-weight: bold;
     text-transform: uppercase;
     transition: color 0.3s ease;
+
   }
   .nav-link:hover {
     color: #343a40 !important;
     transform: scale(1.1);
   }
+
   h1 {
     background-color: rgba(255, 255, 255); /* 50% transparent white */
     border: 2px solid #6c757d;
@@ -63,6 +64,10 @@ background-size: cover;
     border-radius: 15px;
     box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
     animation: fadeInDown 1s ease;
+}
+
+.navbar-nav .nav-item:not(:last-child){
+  margin-right: 50px;
 }
 
 .intro {
