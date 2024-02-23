@@ -6,9 +6,9 @@
       <%= render @artwork %>
 
       <div class="mt-4">
-        <%= link_to "Edit this artwork", edit_artwork_path(@artwork), class: "btn btn-primary mr-2 mb-2" %> 
-        <%= link_to "Back to artworks", artworks_path, class: "btn btn-secondary mr-2 mb-2" %>
-        <%= button_to "Destroy this artwork", @artwork, method: :delete, data: { confirm: "Are you sure?" }, class: "btn btn-danger mb-2" %>
+        <%= link_to "Modifier cette oeuvre", edit_artwork_path(@artwork), class: "btn btn-primary mr-2 mb-2" %> 
+        <%= link_to "Retour au musée", artworks_path, class: "btn btn-secondary mr-2 mb-2" %>
+        <%= button_to "Supprimer l'oeuvre", @artwork, method: :delete, data: { confirm: "Vraiment ?" }, class: "btn btn-danger mb-2" %>
       </div>
     </div>
   </div>

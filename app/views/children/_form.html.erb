@@ -16,47 +16,47 @@
         <div class="card mb-3 border-0 rounded-3">
           <div class="card-body">
             <%= form.label :picture, class: "form-label h4" %>
-            <%= form.text_area :picture, class: "form-control", placeholder: "Enter picture URL here" %>
+            <%= form.text_area :picture, class: "form-control", placeholder: "Ajoutez l'URL de la photo" %>
           </div>
         </div>
 
         <div class="card mb-3 border-0 rounded-3">
           <div class="card-body">
-            <h5 class="card-title h3">Name</h5>
-            <%= form.text_field :name, class: "form-control", required: true, placeholder: "Enter child's name" %>
+            <h5 class="card-title h3">Nom</h5>
+            <%= form.text_field :name, class: "form-control", required: true, placeholder: "Nom de l'enfant" %>
           </div>
         </div>
 
         <div class="card mb-3 border-0 rounded-3">
           <div class="card-body">
-            <h5 class="card-title h3">Firstname</h5>
-            <%= form.text_field :firstname, class: "form-control", required: true, placeholder: "Enter child's firstname" %>
+            <h5 class="card-title h3">Prénom</h5>
+            <%= form.text_field :firstname, class: "form-control", required: true, placeholder: "Prenom de l'enfant" %>
           </div>
         </div>
 
         <div class="card mb-3 border-0 rounded-3">
           <div class="card-body">
             <h5 class="card-title h3">Age</h5>
-            <%= form.number_field :age, class: "form-control", required: true, placeholder: "Enter child's age" %>
+            <%= form.number_field :age, class: "form-control", required: true, placeholder: "Age de l'enfant" %>
           </div>
         </div>
 
         <div class="card mb-3 border-0 rounded-3">
           <div class="card-body">
-            <h5 class="card-title h3">Country</h5>
-            <%= form.text_field :country, class: "form-control", required: true, placeholder: "Enter child's country" %>
+            <h5 class="card-title h3">Pays</h5>
+            <%= form.text_field :country, class: "form-control", required: true, placeholder: "Pays de l'enfant" %>
           </div>
         </div>
 
         <div class="card mb-3 border-0 rounded-3">
           <div class="card-body">
-            <h5 class="card-title h3">City</h5>
-            <%= form.text_field :city, class: "form-control", required: true, placeholder: "Enter child's city" %>
+            <h5 class="card-title h3">Ville</h5>
+            <%= form.text_field :city, class: "form-control", required: true, placeholder: "Ville de l'enfant" %>
           </div>
         </div>
 
         <div class="form-group text-center mt-4">
-          <%= form.submit "Save", class: "btn btn-primary btn-lg rounded-pill px-5 py-3 shadow-sm fw-bold" %>
+          <%= form.submit "Enregistrer", class: "btn btn-primary btn-lg rounded-pill px-5 py-3 shadow-sm fw-bold" %>
         </div>
       <% end %>
     </div>
