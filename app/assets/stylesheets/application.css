@@ -23,6 +23,7 @@
     margin: 0;
     padding: 0;
   }
+
   .navbar {
     background-color: #e8d6a2;
     border-bottom: 1px solid #ef8649;
@@ -49,17 +50,22 @@
     transform: scale(1.1);
   }
   h1 {
-    background-color: rgba(10, 79, 106, 0.401); /* 50% transparent white */
+    background-color: rgba(255, 255, 255); /* 50% transparent white */
     border: 2px solid #6c757d;
     padding: 30px;
     text-align: center;
     margin-top: 50px;
-    color: #ffffff;
+    color: #000000;
     border-radius: 15px;
     box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
     animation: fadeInDown 1s ease;
 }
 
+.intro {
+background-color: rgba(255, 255, 255, 0.8); 
+text-align: left;
+padding : 20px;
+}
   h2 {
     background-color: #f8f9fa;
     border: 2px solid #6c757d;
