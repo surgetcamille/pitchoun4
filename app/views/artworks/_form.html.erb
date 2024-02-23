@@ -1,4 +1,4 @@
-<%= form_with(model: artwork) do |form| %>
+  <%= form_with(model: artwork) do |form| %>
   <% if artwork.errors.any? %>
     <div style="color: red">
       <h2><%= pluralize(artwork.errors.count, "error") %> prohibited this artwork from being saved:</h2>
@@ -28,7 +28,11 @@
 
   <div>
     <%= form.label :author, style: "display: block" %>
-    <%= form.text_field :author %>
+    <select name="artwork[author_id]">
+      <% Child.all.each do |child| %>
+        <option value="<%= child.id %>" <% if artwork.author_id == child.id %>selected="selected"<% end %>><%= child %></option>
+      <% end %>
+    </select>
   </div>
 
   <div>
