@@ -1,10 +1,15 @@
-<p style="color: green"><%= notice %></p>
+<div class="container">
+  <div class="row justify-content-center">
+    <div class="col-md-8">
+      <p class="text-success"><%= notice %></p>
 
-<%= render @artwork %>
+      <%= render @artwork %>
 
-<div>
-  <%= link_to "Edit this artwork", edit_artwork_path(@artwork) %> |
-  <%= link_to "Back to artworks", artworks_path %>
-
-  <%= button_to "Destroy this artwork", @artwork, method: :delete %>
+      <div class="mt-3">
+        <%= link_to "Edit this artwork", edit_artwork_path(@artwork), class: "btn btn-primary mr-2" %> |
+        <%= link_to "Back to artworks", artworks_path, class: "btn btn-secondary mr-2" %>
+        <%= button_to "Destroy this artwork", @artwork, method: :delete, data: { confirm: "Are you sure?" }, class: "btn btn-danger" %>
+      </div>
+    </div>
+  </div>
 </div>

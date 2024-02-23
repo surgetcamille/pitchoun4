@@ -1,46 +1,57 @@
-  <%= form_with(model: artwork) do |form| %>
-  <% if artwork.errors.any? %>
-    <div style="color: red">
-      <h2><%= pluralize(artwork.errors.count, "error") %> prohibited this artwork from being saved:</h2>
-
-      <ul>
-        <% artwork.errors.each do |error| %>
-          <li><%= error.full_message %></li>
+<div class="container">
+  <div class="row justify-content-center">
+    <div class="col-md-8">
+      <%= form_with(model: artwork, local: true, html: { class: "needs-validation", novalidate: true }) do |form| %>
+        <% if artwork.errors.any? %>
+          <div class="alert alert-danger" role="alert">
+            <h4 class="alert-heading"><%= pluralize(artwork.errors.count, "error") %> prohibited this artwork from being saved:</h4>
+            <ul>
+              <% artwork.errors.full_messages.each do |message| %>
+                <li><%= message %></li>
+              <% end %>
+            </ul>
+          </div>
         <% end %>
-      </ul>
-    </div>
-  <% end %>
 
-  <div>
-    <%= form.label :paint, style: "display: block" %>
-    <%= form.text_area :paint %>
-  </div>
+        <div class="card mb-3">
+          <div class="card-body">
+            <%= form.label :paint, class: "form-label", style: "display: block" %>
+            <%= form.text_area :paint, class: "form-control" %>
+          </div>
+        </div>
 
-  <div>
-    <%= form.label :title, style: "display: block" %>
-    <%= form.text_field :title %>
-  </div>
+        <div class="card mb-3">
+          <div class="card-body">
+            <%= form.label :title, class: "form-label", style: "display: block" %>
+            <%= form.text_field :title, class: "form-control" %>
+          </div>
+        </div>
 
-  <div>
-    <%= form.label :date, style: "display: block" %>
-    <%= form.date_field :date %>
-  </div>
+        <div class="card mb-3">
+          <div class="card-body">
+            <%= form.label :date, class: "form-label", style: "display: block" %>
+            <%= form.date_field :date, class: "form-control" %>
+          </div>
+        </div>
 
-  <div>
-    <%= form.label :author, style: "display: block" %>
-    <select name="artwork[author_id]">
-      <% Child.all.each do |child| %>
-        <option value="<%= child.id %>" <% if artwork.author_id == child.id %>selected="selected"<% end %>><%= child %></option>
+        <div class="card mb-3">
+          <div class="card-body">
+            <%= form.label :author, class: "form-label", style: "display: block" %>
+            <%= form.select :author_id, Child.all.map { |child| [child.name, child.id] }, { include_blank: true }, class: "form-control" %>
+          </div>
+        </div>
+
+        <div class="card mb-3">
+          <div class="card-body">
+            <%= form.label :description, class: "form-label", style: "display: block" %>
+            <%= form.text_area :description, class: "form-control" %>
+          </div>
+        </div>
+
+        <div class="form-group">
+          <%= form.submit "Save", class: "btn btn-success" %>
+        </div>
       <% end %>
-    </select>
+    </div>
   </div>
-
-  <div>
-    <%= form.label :description, style: "display: block" %>
-    <%= form.text_area :description %>
-  </div>
-
-  <div>
-    <%= form.submit %>
-  </div>
-<% end %>
+</div>
