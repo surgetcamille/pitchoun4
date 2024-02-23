@@ -1,34 +1,28 @@
-<div id="<%= dom_id child %>">
-  <p>
-    <strong>Picture:</strong>
-    <div class="imageChild">
-    <%= image_tag child.picture, class: "card-img-top"%>
+<div id="<%= dom_id child %>" class="card">
+  <div class="card-body">
+    <div class="row">
+      <div class="col-md-4">
+        <h5 class="card-title"><strong>Picture:</strong></h5>
+        <div class="imageChild">
+          <img src="<%= child.picture %>" class="card-img-top" alt="Child Picture">
+        </div>
+      </div>
+      <div class="col-md-8">
+        <h5 class="card-title"><strong>Name:</strong></h5>
+        <p class="card-text"><%= child.name %></p>
+
+        <h5 class="card-title"><strong>Firstname:</strong></h5>
+        <p class="card-text"><%= child.firstname %></p>
+
+        <h5 class="card-title"><strong>Age:</strong></h5>
+        <p class="card-text"><%= child.age %></p>
+
+        <h5 class="card-title"><strong>Country:</strong></h5>
+        <p class="card-text"><%= child.country %></p>
+
+        <h5 class="card-title"><strong>City:</strong></h5>
+        <p class="card-text"><%= child.city %></p>
+      </div>
+    </div>
   </div>
-  </p>
-
-  <p>
-    <strong>Name:</strong>
-    <%= child.name %>
-  </p>
-
-  <p>
-    <strong>Firstname:</strong>
-    <%= child.firstname %>
-  </p>
-
-  <p>
-    <strong>Age:</strong>
-    <%= child.age %>
-  </p>
-
-  <p>
-    <strong>Country:</strong>
-    <%= child.country %>
-  </p>
-
-  <p>
-    <strong>City:</strong>
-    <%= child.city %>
-  </p>
-
 </div>
