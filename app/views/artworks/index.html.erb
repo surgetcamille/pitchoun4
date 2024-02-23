@@ -8,14 +8,18 @@
       <a class="btn btn-outline-secondary" href="<%= new_child_path %>">Create a new profile for your child</a>
     </div>
 
-    <div id="artworks">
-      <% @artworks.each do |artwork| %>
-        <%= render artwork %>
+<div id="artworks" class="d-flex justify-content-around flex-wrap">
+  <% @artworks.each do |artwork| %>
+    <div class="card mb-3" style="width: 18rem;">
+      <%= render artwork %>
+      <div class="card-body">
         <p>
           <%= link_to "Show this artwork", artwork %>
         </p>
-      <% end %>
+      </div>
     </div>
+  <% end %>
+</div>
 
     
     
