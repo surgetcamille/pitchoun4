@@ -1,5 +1,12 @@
   <div class="container">
     <h1>Welcome to Pitchoun's Museum</h1>
+    <p class="intro"><br><strong>Salut les parents !</strong><br> Si vos enfants sont de vrais <strong>artistes</strong> mais que vous n'avez <strong>plus de place sur votre frigo</strong>, vous vous trouvez au bon endroit ! <br>
+    Grâce au <b>Pichoun's Museum</b> les dessins de vos enfants seront <strong>valorisés</strong> et affichés dans un vrai musée ! <br> Ils pourront ainsi retrouver plus tard les oeuvres de leur enfance dans un <strong>moment de nostalgie </strong><br>
+    Alors <strong>n'hésitez plus</strong> ! Fini les pleurs des enfants qui retrouvent un de leur dessin à la poubelle ! <strong>Déposez leurs oeuvres d'art dans le Pitchoun's Museum</strong> et soufflez ! <br> 
+    Tous les enfants du monde peuvent venir déposer leur oeuvre d'art dans ce musée et même s'inscrire en tant que réel artiste sur le site ! <br> 
+    L'entrée est <b>gratuite</b> ! Bonne visite !  <br></p>
+
+    <br>
 
     <div class="mb-5">
       <a class="btn btn-outline-secondary" href="<%= new_child_path %>">Create a new profile for your child</a>
@@ -7,9 +14,9 @@
 
 <div id="artworks" class="d-flex justify-content-around flex-wrap">
   <% @artworks.each do |artwork| %>
-    <div class="card mb-3" style="width: 18rem;">
-      <%= render artwork %>
+    <div class=" mb-3" style="width: 30rem;">
       <div class="card-body">
+        <%= render artwork %>
         <p>
           <%= link_to "Show this artwork", artwork, class: "btn btn-primary" %>
         </p>
@@ -17,7 +24,11 @@
     </div>
   <% end %>
 </div>
+<br>
+
     <div class="mb-5">
       <a class="btn btn-outline-secondary" href="<%= new_artwork_path %>">Create a new artwork</a>
     </div>
   </div>
+  
+  
