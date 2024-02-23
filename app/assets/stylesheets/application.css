@@ -78,7 +78,7 @@ padding : 20px;
     animation: fadeInUp 1s ease;
   }
   .container {
-    max-width: 800px;
+    max-width: auto;
     margin: auto;
     text-align: center;
   }

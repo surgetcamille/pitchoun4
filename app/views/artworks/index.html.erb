@@ -14,9 +14,9 @@
 
 <div id="artworks" class="d-flex justify-content-around flex-wrap">
   <% @artworks.each do |artwork| %>
-    <div class="card mb-3" style="width: 18rem;">
-      <%= render artwork %>
+    <div class=" mb-3" style="width: 30rem;">
       <div class="card-body">
+        <%= render artwork %>
         <p>
           <%= link_to "Show this artwork", artwork, class: "btn btn-primary" %>
         </p>
@@ -25,6 +25,7 @@
   <% end %>
 </div>
 <br>
+
     <div class="mb-5">
       <a class="btn btn-outline-secondary" href="<%= new_artwork_path %>">Create a new artwork</a>
     </div>
