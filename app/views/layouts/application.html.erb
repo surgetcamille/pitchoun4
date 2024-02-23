@@ -32,6 +32,7 @@
     </div>
   </nav>
     <%= yield %>
+    <br>
 <footer class="footer bg-orange text-black py-4">
   <div class="container">
     <div class="row">
@@ -46,6 +47,7 @@
       <div class="col-md-6 mx-auto">
         <h5 class="footer-heading"><span style="text-decoration: underline;">Navigation</span></h5>
         <ul class="list-unstyled">
+          <li><a class="nav-link" href="<%= children_path %>">Tous d'artiste</a></li>
           <li><a class="nav-link" href="<%= new_artwork_path %>">Ajouter une œuvre</a></li>
           <li><a class="nav-link" href="<%= new_child_path %>">Ajouter un artiste</a></li>
         </ul>
