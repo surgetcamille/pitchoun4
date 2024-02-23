@@ -29,34 +29,36 @@
     </div>
   </nav>
     <%= yield %>
-  <footer class="footer bg-orange color-black py-4">
+<footer class="footer bg-orange text-black py-4">
   <div class="container">
     <div class="row">
-      <div class="col-md-5 mx-auto"> <!-- Ajout de la classe mx-auto pour centrer -->
-        <h5>Social media :</h5>
-        <a  class="" href="#">Facebook</a>
-        <br>
-        <a class="" href="#">Twitter</a>
-        <br>
-        <a class="" href="#">Instagram</a>
+      <div class="col-md-5 mx-auto">
+        <h5 class="footer-heading"><span style="text-decoration: underline;">RESTONS CONNECTÉS</span></h5>
+        <ul class="list-unstyled">
+          <li><a class="social-link" href="#"><i class="fab fa-facebook-f"></i> Facebook</a></li>
+          <li><a class="social-link" href="#"><i class="fab fa-twitter"></i> Twitter</a></li>
+          <li><a class="social-link" href="#"><i class="fab fa-instagram"></i> Instagram</a></li>
+        </ul>
       </div>
-      <div class="col-md-6 mx-auto"> <!-- Ajout de la classe mx-auto pour centrer -->
-        <h5>Navigation :</h5>
-        <a class="" href="<%= new_artwork_path %>">Add an artwork</a>
-        <br>
-        <a class="" href="<%= new_child_path %>">Add Artists Children</a>
+      <div class="col-md-6 mx-auto">
+        <h5 class="footer-heading"><span style="text-decoration: underline;">NAVIGATION</span></h5>
+        <ul class="list-unstyled">
+          <li><a class="nav-link" href="<%= new_artwork_path %>">Ajouter une œuvre</a></li>
+          <li><a class="nav-link" href="<%= new_child_path %>">Ajouter les enfants d'artistes</a></li>
+        </ul>
       </div>
     </div>
     <div class="row">
       <div class="col">
         <div class="text-center">
-          <br>
-          <p>Made by Camille Surget Lucas Le goff Maxence Mingasson</p>
+          <p class="mb-0">© 2024 Réalisé par Camille Surget, Lucas Le Goff, et Maxence Mingasson. Tous droits réservés.</p>
         </div>
       </div>
     </div>
   </div>
 </footer>
+
+
   </body>
 </html>
 
