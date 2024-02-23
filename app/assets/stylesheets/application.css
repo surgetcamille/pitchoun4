@@ -93,6 +93,22 @@
     box-shadow: 0 0 0 0.2rem rgba(108, 117, 125, 0.5);
   }
 
+  ul {
+    list-style-position: inside;
+  }
+
+  .bg-orange{
+    color: #2a2c2e;
+    background-color: #e8d6a2;
+  }
+
+  a {
+    color: #000; /* Noir */
+  }
+  
+
+  
+
   @keyframes fadeInDown {
     from {
       opacity: 0;
