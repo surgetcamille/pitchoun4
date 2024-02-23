@@ -15,14 +15,17 @@
  */
  
  body {
-    background-image: url('https://cdn.midjourney.com/2e25117d-a14f-4519-b50a-dfcad1d9183b/0_2.png');
-    background-size: cover;
-    background-position: center;
-    font-family: 'Arial', sans-serif;
-    color: #333;
-    margin: 0;
-    padding: 0;
-  }
+  background-image: url('https://cdn.midjourney.com/2e25117d-a14f-4519-b50a-dfcad1d9183b/0_2.png ');
+background-size: cover;
+  background-attachment: fixed; /* Ajout de cette ligne */
+  background-position: center;
+  font-family: 'Arial', sans-serif;
+  color: #333;
+  margin: 0;
+  padding: 0;
+}
+
+
 
   .navbar {
     background-color: #e8d6a2;
