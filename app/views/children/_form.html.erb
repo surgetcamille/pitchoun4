@@ -4,7 +4,7 @@
       <%= form_with(model: child, local: true, html: { class: "needs-validation", novalidate: true }) do |form| %>
         <% if child.errors.any? %>
           <div class="alert alert-danger" role="alert">
-            <h4 class="alert-heading"><%= pluralize(child.errors.count, "error") %> prohibited this child from being saved:</h4>
+            <h4 class="alert-heading mb-3 fs-5"><%= pluralize(child.errors.count, "error") %> prohibited this child from being saved:</h4>
             <ul>
               <% child.errors.full_messages.each do |message| %>
                 <li><%= message %></li>
@@ -13,58 +13,52 @@
           </div>
         <% end %>
 
-        <div class="card mb-3 border-0">
+        <div class="card mb-3 border-0 rounded-3">
           <div class="card-body">
-            <%= form.label :picture, class: "form-label", style: "display: block" %>
+            <%= form.label :picture, class: "form-label h4" %>
             <%= form.text_area :picture, class: "form-control", placeholder: "Enter picture URL here" %>
           </div>
         </div>
 
-        <div class="card mb-3 border-0">
+        <div class="card mb-3 border-0 rounded-3">
           <div class="card-body">
-            <h5 class="card-title">Name</h5>
+            <h5 class="card-title h3">Name</h5>
             <%= form.text_field :name, class: "form-control", required: true, placeholder: "Enter child's name" %>
           </div>
         </div>
 
-        <div class="card mb-3 border-0">
+        <div class="card mb-3 border-0 rounded-3">
           <div class="card-body">
-            <h5 class="card-title">Firstname</h5>
+            <h5 class="card-title h3">Firstname</h5>
             <%= form.text_field :firstname, class: "form-control", required: true, placeholder: "Enter child's firstname" %>
           </div>
         </div>
 
-        <div class="card mb-3 border-0">
+        <div class="card mb-3 border-0 rounded-3">
           <div class="card-body">
-            <h5 class="card-title">Age</h5>
+            <h5 class="card-title h3">Age</h5>
             <%= form.number_field :age, class: "form-control", required: true, placeholder: "Enter child's age" %>
           </div>
         </div>
 
-        <div class="card mb-3 border-0">
+        <div class="card mb-3 border-0 rounded-3">
           <div class="card-body">
-            <h5 class="card-title">Country</h5>
+            <h5 class="card-title h3">Country</h5>
             <%= form.text_field :country, class: "form-control", required: true, placeholder: "Enter child's country" %>
           </div>
         </div>
 
-        <div class="card mb-3 border-0">
+        <div class="card mb-3 border-0 rounded-3">
           <div class="card-body">
-            <h5 class="card-title">City</h5>
+            <h5 class="card-title h3">City</h5>
             <%= form.text_field :city, class: "form-control", required: true, placeholder: "Enter child's city" %>
           </div>
         </div>
 
-        <div class="form-group text-center">
-          <%= form.submit "Save", class: "btn btn-primary btn-lg rounded-pill px-5 py-2 shadow-sm" %>
+        <div class="form-group text-center mt-4">
+          <%= form.submit "Save", class: "btn btn-primary btn-lg rounded-pill px-5 py-3 shadow-sm fw-bold" %>
         </div>
       <% end %>
-
-      <!-- Message de remerciement -->
-      <div id="thank-you" class="text-center" style="display: none;">
-        <h3>Merci !</h3>
-        <p>Votre formulaire a été soumis avec succès.</p>
-      </div>
     </div>
   </div>
 </div>
