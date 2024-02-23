@@ -13,43 +13,43 @@
           </div>
         <% end %>
 
-        <div class="card mb-3">
+        <div class="card mb-3 border-0">
           <div class="card-body">
             <%= form.label :paint, class: "form-label", style: "display: block" %>
-            <%= form.text_area :paint, class: "form-control" %>
+            <%= form.text_area :paint, class: "form-control", placeholder: "Enter paint details here" %>
           </div>
         </div>
 
-        <div class="card mb-3">
+        <div class="card mb-3 border-0">
           <div class="card-body">
             <%= form.label :title, class: "form-label", style: "display: block" %>
-            <%= form.text_field :title, class: "form-control" %>
+            <%= form.text_field :title, class: "form-control", placeholder: "Enter artwork title" %>
           </div>
         </div>
 
-        <div class="card mb-3">
+        <div class="card mb-3 border-0">
           <div class="card-body">
             <%= form.label :date, class: "form-label", style: "display: block" %>
-            <%= form.date_field :date, class: "form-control" %>
+            <%= form.date_field :date, class: "form-control", placeholder: "Select date" %>
           </div>
         </div>
 
-        <div class="card mb-3">
+        <div class="card mb-3 border-0">
           <div class="card-body">
             <%= form.label :author, class: "form-label", style: "display: block" %>
-            <%= form.select :author_id, Child.all.map { |child| [child.name, child.id] }, { include_blank: true }, class: "form-control" %>
+            <%= form.select :author_id, Child.all.map { |child| [child.name, child.id] }, { include_blank: true }, class: "form-control", prompt: "Select author" %>
           </div>
         </div>
 
-        <div class="card mb-3">
+        <div class="card mb-3 border-0">
           <div class="card-body">
             <%= form.label :description, class: "form-label", style: "display: block" %>
-            <%= form.text_area :description, class: "form-control" %>
+            <%= form.text_area :description, class: "form-control", placeholder: "Enter artwork description" %>
           </div>
         </div>
 
-        <div class="form-group">
-          <%= form.submit "Save", class: "btn btn-success" %>
+        <div class="form-group text-center">
+          <%= form.submit "Save", class: "btn btn-primary btn-lg rounded-pill px-5 py-2 shadow-sm" %>
         </div>
       <% end %>
     </div>
